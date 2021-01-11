@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode development",
-    "serve": "npx webpack-cli serve"
+    "start": "npx webpack-cli serve"
   },
   "keywords": [],
   "author": "",
@@ -35,8 +35,11 @@
   },
   "dependencies": {
     "@babel/runtime-corejs3": "^7.12.5",
+    "bootstrap": "^4.5.3",
     "react": "^17.0.1",
+    "react-bootstrap": "^1.4.3",
     "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
     "uuid": "^8.3.2"
   }
 }

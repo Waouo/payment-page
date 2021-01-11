@@ -1,18 +1,14 @@
-import ReactDom from 'react-dom'
-import HomeScreen from './screens/HomeScreen'
-import { useState } from 'react'
-import {Provider} from 'react-redux'
-import store from './store'
+import { BrowserRouter as Router } from 'react-router-dom'
+import Routes from './Routes'
 
 const App = () => {
-
-  
   return (
-    <Provider store={store}>
-      <HomeScreen />
-    </Provider>
+    <>
+      <Router>
+        <Routes />
+      </Router>
+    </>
   )
 }
 
-const root = document.getElementById('root')
-ReactDom.render(<App />, root)
+export default App
