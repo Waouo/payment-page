@@ -1,19 +1,19 @@
-import storePicture from '../images/storePicture.Png'
-import { ButtonGroup, ToggleButton } from 'react-bootstrap'
-import order from '../order'
 import { useState } from 'react'
+import order from '../order'
+import storePicture from '../images/storePicture.Png'
+import logoSm from '../images/logo_sm.png'
 
 const OrderInfo = () => {
-  const [method, setMethod] = useState(0)
+  const [method, setMethod] = useState('1')
 
   const radios = [
-    { value: 0, name: '信用卡' },
-    { value: 1, name: '網路ATM', text: '晶片讀卡機轉帳' },
-    { value: 2, name: 'ATM櫃員機', text: '實體ATM及網銀' },
+    { value: '0', name: '信用卡' },
+    { value: '1', name: '網路ATM', text: '晶片讀卡機轉帳' },
+    { value: '2', name: 'ATM櫃員機', text: '實體ATM及網銀' },
   ]
 
   return (
-    <section className="order justify-content-center flex-wrap">
+    <section className="order justify-content-center flex-wrap pb-3">
       <img className="img-store" src={storePicture} style={{ width: '100%' }} />
       <div className="order-info w-100  ">
         <h1 className="title">訂單資訊</h1>
@@ -31,24 +31,36 @@ const OrderInfo = () => {
       </div>
       <div className="order-method w-100">
         <h2 className="font-weight-bold mt-3 mb-3">支付方式</h2>
-        <ButtonGroup className="w-100 " toggle vertical>
+        <div>
           {radios.map((radio, idx) => (
-            <ToggleButton
+            <label
               key={idx}
-              type="radio"
-              variant="light"
-              name="radio"
-              value={radio.value}
-              checked={method === radio.value}
-              onChange={(e) => setMethod(e.currentTarget.value)}
-              className="my-1"
-              size="lg"
+              htmlFor={radio.name}
+              className={`btn-cus d-flex align-items-center flex-wrap text-left pl-5 mb-3 ${
+                radio.value === method && 'btn-cus-active'
+              }`}
             >
-              {radio.name}
-            </ToggleButton>
+              <input
+                type="radio"
+                name="method"
+                id={radio.name}
+                value={radio.value}
+                checked={radio.value === method}
+                onChange={(e) => setMethod(e.currentTarget.value)}
+                style={{ display: 'none' }}
+              />
+              <div>{radio.name}</div>
+
+              {radio.text && (
+                <span className="sub-text">
+                  &nbsp; &nbsp; &nbsp;{`(${radio.text})`}
+                </span>
+              )}
+            </label>
           ))}
-        </ButtonGroup>
+        </div>
       </div>
+      <img src={logoSm} className="ml-3" />
     </section>
   )
 }

@@ -1,0 +1,92 @@
+$dark: #343434 0% 0% no-repeat padding-box;
+
+.order {
+  background: #a8d574 0% 0% no-repeat padding-box;
+  opacity: 1;
+
+  &-info,
+  &-method {
+    padding-left: 20%;
+  }
+  @media (max-width: 576px) {
+    &-method {
+      padding-left: 0;
+    }
+  }
+
+  &-method {
+    &-btn {
+      padding: 0 80% 0;
+    }
+  }
+}
+
+.img-store {
+  background-image: url(../images/storePicture_2x.png);
+}
+
+.font-space {
+  letter-spacing: 2.4px;
+}
+
+.price {
+  font: normal normal 300 36px/94px NotoSans CJK TC;
+  letter-spacing: 3.6px;
+}
+
+.btn-light {
+  background-color: #f8f8f8;
+  color: black;
+  transition: width 200ms linear;
+
+  &:not(:disabled):not(.disabled).active {
+    width: 100%;
+    background: $dark;
+    box-shadow: 0px 4px 4px #0000003d;
+    color: #fff;
+    padding: 0 20px 0 40px;
+  }
+}
+
+@media (min-width: 576px), all {
+  .btn-light {
+    transition: none;
+  }
+
+  btn:not(:disabled):not(.disabled).active {
+    width: 80% !important;
+  }
+}
+
+.btn-cus {
+  display: inline-block;
+  width: 83%;
+  height: 90px;
+  background-color: #f8f8f8;
+  font: normal normal 300 25px/94px Noto Sans CJK TC;
+  line-height: 25px;
+  color: #707070;
+  letter-spacing: 3.2px;
+  cursor: pointer;
+  transition: width 200ms linear;
+
+  @media (max-width: 576px) {
+    & {
+      width: 100%;
+    }
+  }
+
+  &-active {
+    width: 100%;
+    background: $dark;
+    color: #ffffff;
+  }
+}
+
+.sub-text {
+  display: inline-block;
+  font: normal normal 300 14px/94px Noto Sans CJK TC;
+  line-height: 14px;
+  letter-spacing: 0px;
+  color: #707070;
+}

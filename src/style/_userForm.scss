@@ -1,0 +1,28 @@
+.user {
+  background: #343434 0% 0% no-repeat padding-box;
+  padding: 20% 20% 10% 10%;
+}
+
+$creditImage: (
+  jcb: url(../images/jcb_gray.svg) no-repeat,
+  jcb-active: url(../images/jcb_green.png) no-repeat,
+  master: url(../images/mastercard_gray.svg) no-repeat,
+  master-active: url(../images/mastercard_green.png) no-repeat,
+  visa: url(../images/visa_gray.svg) no-repeat,
+  visa-active: url(../images/visa_green.png) no-repeat,
+  unionPay: url(../images/unionPay_gray.png) no-repeat,
+  unionPay-active: url(../images/unionPay_green.png) no-repeat,
+);
+
+@each $key, $value in $creditImage {
+  .icon-#{$key} {
+    background: $value;
+  }
+}
+
+.icon-credit {
+  display: inline-block;
+  width: 110px;
+  height: 77px;
+  cursor: pointer;
+}

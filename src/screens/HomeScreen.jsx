@@ -7,10 +7,10 @@ const HomeScreen = () => {
     <>
       <Container style={{ margin: '0', maxWidth: '100%' }}>
         <Row>
-          <Col sm={4} style={{ padding: '0' }}>
+          <Col sm={5} style={{ padding: '0' }}>
             <OrderInfo />
           </Col>
-          <Col sm={8} style={{ padding: '0' }}>
+          <Col sm={7} style={{ padding: '0' }}>
             <UserInfo />
           </Col>
         </Row>
