@@ -22,7 +22,7 @@ const OrderInfo = () => {
         <h2 className="font-weight-bold mt-3 mb-3">訂單編號</h2>
         <p className="font-space">{order.id}</p>
         <h2 className="font-weight-bold mt-5 mb-3">本訂單將支付</h2>
-        <p className="text-right">
+        <p className="text-right pr-5">
           <span className="price font-weight-bold text-right font-lg">
             ${order.price}
           </span>
