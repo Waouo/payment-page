@@ -1,6 +1,7 @@
 .user {
+  height: 100%;
   background: #343434 0% 0% no-repeat padding-box;
-  padding: 20% 20% 10% 10%;
+  padding: 30% 20% 10% 10%;
 }
 
 $creditImage: (
@@ -28,12 +29,37 @@ $creditImage: (
   cursor: pointer;
 }
 
-.input-label {
-  font: normal normal medium 18px/94px Noto Sans CJK TC;
+.input-label-font {
+  font: normal normal 300 18px/94px Noto Sans CJK TC;
+  line-height: inherit;
   letter-spacing: 0px;
   color: #a8d574;
 }
 
-.error {
-  color: red;
+.input-error {
+  text-align: left;
+  font: normal normal 100 12px/16px Roboto;
+  letter-spacing: 0px;
+  color: #ff521a;
+}
+
+#phoneNumberHelpBlock {
+  font: normal normal normal 14px/24px Noto Sans CJK TC;
+  letter-spacing: 0px;
+  color: #ffd065;
+}
+
+.user-button {
+  background: #a8d574 0% 0% no-repeat padding-box;
+  box-shadow: 0px 2px 2px #0000003d;
+  border-radius: 2px;
+  color: black;
+
+  &:hover{
+   background: #5f8138 0% 0% no-repeat padding-box
+  }
+}
+
+.form-group {
+  margin-bottom: 0;
 }

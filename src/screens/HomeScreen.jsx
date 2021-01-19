@@ -11,7 +11,7 @@ const HomeScreen = () => {
             <OrderInfo />
           </Col>
           <Col sm={7} style={{ padding: '0' }}>
-            <UserInfo />
+            <UserInfo  />
           </Col>
         </Row>
       </Container>
